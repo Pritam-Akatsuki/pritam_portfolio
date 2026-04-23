@@ -6,7 +6,7 @@ const links = ['About', 'Skills', 'Experience', 'Projects'];
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState('about');
 
   useEffect(() => {
     const onScroll = () => {
@@ -18,6 +18,11 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  const handleNavClick = (linkName) => {
+    setActive(linkName.toLowerCase());
+    setOpen(false);
+  };
 
   return (
     <motion.nav
@@ -37,12 +42,12 @@ export default function Navbar() {
       {/* Logo */}
       <a href="#hero" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'Syne', fontWeight: 800, fontSize: '1.25rem' }}>
         <span style={{
-          width: '32px', height: '32px', borderRadius: '8px',
+          width: '35px', height: '35px', borderRadius: '10px',
           background: 'var(--yellow)', color: 'var(--dark)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontSize: '0.9rem', fontWeight: 900,
-        }}>P</span>
-        <span>Lambade<span style={{ color: 'var(--yellow)' }}>.</span></span>
+        }}>PL</span>
+        <span>Protfolio</span>
       </a>
 
       {/* Desktop */}
@@ -51,6 +56,7 @@ export default function Navbar() {
           <li key={link}>
             <a
               href={`#${link.toLowerCase()}`}
+              onClick={() => handleNavClick(link)}
               style={{
                 fontFamily: 'Syne', fontWeight: 600, fontSize: '0.82rem',
                 letterSpacing: '0.08em', textTransform: 'uppercase',
@@ -68,7 +74,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <a
+      {/* <a
         href="https://pritam-akatsuki.github.io/MyPortfolio.github.io/ImgCss/Resume1.pdf"
         target="_blank"
         rel="noreferrer"
@@ -76,7 +82,7 @@ export default function Navbar() {
         style={{ padding: '10px 22px', fontSize: '0.78rem' }}
       >
         Resume ↗
-      </a>
+      </a> */}
 
       {/* Hamburger */}
       <button
@@ -102,7 +108,7 @@ export default function Navbar() {
           >
             {links.map(link => (
               <a key={link} href={`#${link.toLowerCase()}`}
-                onClick={() => setOpen(false)}
+                onClick={() => handleNavClick(link)}
                 style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '1.4rem', color: 'var(--white)', padding: '10px 0', borderBottom: '1px solid var(--border)' }}
               >
                 {link}

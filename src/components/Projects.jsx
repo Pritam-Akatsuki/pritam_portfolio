@@ -13,10 +13,10 @@ export default function Projects() {
           style={{ marginBottom: '60px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '24px' }}
         >
           <div>
-            <span className="section-label">What I've Built</span>
-            <h2 className="section-title">
+            <span className="section-label">What I've Work on</span>
+            <h4 className="section-title">
               Featured <span className="highlight">Projects</span>
-            </h2>
+            </h4>
           </div>
           <a
             href="https://github.com/Pritam-Akatsuki"
@@ -79,8 +79,8 @@ export default function Projects() {
               }}>
                 {/* Emoji icon */}
                 <div style={{
-                  width: '52px', height: '52px', borderRadius: '14px',
-                  background: p.color + '18',
+                  width: '42px', height: '42px', borderRadius: '14px',
+                  background: p.color + '11',
                   border: `1px solid ${p.color}35`,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: '1.5rem',
@@ -90,7 +90,7 @@ export default function Projects() {
 
                 {/* Links */}
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <a
+                  {/* <a
                     href={p.github}
                     target="_blank"
                     rel="noreferrer"
@@ -105,7 +105,7 @@ export default function Projects() {
                     onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--gray)'; }}
                   >
                     <FiGithub size={16} />
-                  </a>
+                  </a> */}
                   {p.link !== '#' && (
                     <a
                       href={p.link}

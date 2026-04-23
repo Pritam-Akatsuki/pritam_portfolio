@@ -7,10 +7,10 @@ export const personalInfo = {
   location: "Maharashtra, India",
   github: "https://github.com/Pritam-Akatsuki",
   linkedin: "https://www.linkedin.com/in/pritam-lambade-7996b420a/",
-  instagram: "https://www.instagram.com/_mr.p_581_/",
+  instagram: "https://www.instagram.com/_noname.2001/",
   hackerrank: "https://www.hackerrank.com/profile/pritamlambade",
   portfolio: "https://pritam-akatsuki.github.io/MyPortfolio.github.io/portfolio.html",
-  resumeLink: "https://pritam-akatsuki.github.io/MyPortfolio.github.io/ImgCss/Resume1.pdf",
+  resumeLink: "https://drive.google.com/file/d/1w4dZojTny_kqF9otvbqCFGGeprDveSIH/view?usp=sharing",
   about:
     "Software Developer with 3+ years of experience building scalable web and mobile applications using Flutter, Angular, and React. Specialized in SAP Spartacus and SAP Commerce Cloud (Hybris) customizations, frontend architecture, and API integrations. Strong focus on performance, clean UI, analytics, and maintainable code.",
 };
