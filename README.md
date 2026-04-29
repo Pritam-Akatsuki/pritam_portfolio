@@ -81,12 +81,3 @@ export default defineConfig({
 [Pritam's Portfolio](https://pritam-akatsuki.github.io/pritam_portfolio/)
 
 ---
-
-
-
----
-
-## 📞 Contact
-
-* Email: [your@email.com](mailto:your@email.com)
-* GitHub: your-github
