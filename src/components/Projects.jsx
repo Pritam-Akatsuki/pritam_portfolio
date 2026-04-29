@@ -78,7 +78,7 @@ export default function Projects() {
                 flexWrap: 'wrap', gap: '12px',
               }}>
                 {/* Emoji icon */}
-                <div style={{
+                {/* <div style={{
                   width: '42px', height: '42px', borderRadius: '14px',
                   background: p.color + '11',
                   border: `1px solid ${p.color}35`,
@@ -86,7 +86,7 @@ export default function Projects() {
                   fontSize: '1.5rem',
                 }}>
                   {p.emoji}
-                </div>
+                </div> */}
 
                 {/* Links */}
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
@@ -154,12 +154,12 @@ export default function Projects() {
                     }}>{tag}</span>
                   ))}
                 </div>
-                <span style={{
+                {/* <span style={{
                   display: 'flex', alignItems: 'center', gap: '6px',
                   color: 'var(--gray)', fontSize: '0.78rem',
                 }}>
                   <FiCalendar size={12} /> {p.duration}
-                </span>
+                </span> */}
               </div>
             </motion.div>
           ))}

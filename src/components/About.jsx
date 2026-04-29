@@ -43,7 +43,7 @@ export default function About() {
               ].map(row => (
                 <div key={row.label} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
                   <span style={{
-                    fontFamily: 'Syne', fontSize: '0.7rem', fontWeight: 700,
+                    fontFamily: 'Inter', fontSize: '0.7rem', fontWeight: 700,
                     letterSpacing: '0.15em', textTransform: 'uppercase',
                     color: 'var(--yellow)', minWidth: '88px', paddingTop: '2px',
                   }}>{row.label}</span>
@@ -87,12 +87,12 @@ export default function About() {
                   style={{ padding: '28px 24px', textAlign: 'center' }}
                 >
                   <div style={{
-                    fontSize: '2.6rem', fontFamily: 'Syne', fontWeight: 800,
+                    fontSize: '2.6rem', fontFamily: 'Inter', fontWeight: 800,
                     background: 'linear-gradient(135deg, var(--yellow), var(--orange))',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text', lineHeight: 1,
                   }}>{s.num}</div>
-                  <div style={{ color: 'var(--gray)', fontSize: '0.82rem', marginTop: '6px', fontFamily: 'Syne' }}>{s.label}</div>
+                  <div style={{ color: 'var(--gray)', fontSize: '0.82rem', marginTop: '6px', fontFamily: 'Inter' }}>{s.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -106,20 +106,20 @@ export default function About() {
               className="card"
               style={{ padding: '28px' }}
             >
-              <p style={{ fontFamily: 'Syne', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--yellow)', marginBottom: '18px' }}>
+              <p style={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--yellow)', marginBottom: '18px' }}>
                 Certifications
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                 {certifications.map((c, i) => (
                   <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
                     <div>
-                      <p style={{ color: 'var(--white)', fontSize: '0.9rem', fontWeight: 500, fontFamily: 'Syne' }}>{c.name}</p>
+                      <p style={{ color: 'var(--white)', fontSize: '0.9rem', fontWeight: 500, fontFamily: 'Inter' }}>{c.name}</p>
                       <p style={{ color: 'var(--gray)', fontSize: '0.78rem' }}>{c.issuer}</p>
                     </div>
                     <span style={{
                       padding: '3px 12px', borderRadius: '100px',
                       background: 'rgba(255,214,0,0.1)', color: 'var(--yellow)',
-                      fontSize: '0.72rem', fontFamily: 'Syne', fontWeight: 700, flexShrink: 0,
+                      fontSize: '0.72rem', fontFamily: 'Inter', fontWeight: 700, flexShrink: 0,
                     }}>{c.year}</span>
                   </div>
                 ))}

@@ -3,9 +3,9 @@ import { FiGithub, FiLinkedin, FiInstagram, FiMail, FiPhone } from 'react-icons/
 import { personalInfo } from '../data/data';
 
 const socials = [
-  { icon: <FiGithub size={18} />, link: personalInfo.github, label: 'GitHub' },
-  { icon: <FiLinkedin size={18} />, link: personalInfo.linkedin, label: 'LinkedIn' },
-  { icon: <FiInstagram size={18} />, link: personalInfo.instagram, label: 'Instagram' },
+  { icon: <FiGithub size={17} />, link: personalInfo.github, label: 'GitHub' },
+  { icon: <FiLinkedin size={17} />, link: personalInfo.linkedin, label: 'LinkedIn' },
+  { icon: <FiInstagram size={17} />, link: personalInfo.instagram, label: 'Instagram' },
 ];
 
 export default function Footer() {
@@ -13,131 +13,129 @@ export default function Footer() {
     <footer style={{
       background: 'var(--dark2)',
       borderTop: '1px solid var(--border)',
-      padding: '0',
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* CTA band */}
       <div style={{
-        background: 'linear-gradient(135deg, rgba(255,214,0,0.06) 0%, transparent 60%)',
-        borderBottom: '1px solid var(--border)',
-        padding: '60px 0',
+        width: '100%',
+        padding: '32px clamp(20px, 5vw, 80px)',
+        boxSizing: 'border-box',
       }}>
-        <div className="container">
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            style={{ textAlign: 'center' }}
-          >
-            <h2 style={{
-              fontFamily: 'Syne', fontWeight: 800,
-              fontSize: 'clamp(1.8rem, 4vw, 3rem)',
-              marginBottom: '16px', letterSpacing: '-0.02em',
-            }}>
-              Let's work <span className="highlight">together</span>
-            </h2>
-            <p style={{ color: 'var(--gray)', marginBottom: '36px', fontSize: '0.95rem', maxWidth: '440px', margin: '0 auto 36px' }}>
-              Open to freelance projects, full-time roles, or just a great conversation about tech.
-            </p>
-            
-            {/* Contact and Social Links */}
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }} className="footer-contact">
-              {/* Contact Info */}
-              <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }} className="footer-contact-info">
-                <a
-                  href={`mailto:${personalInfo.email}`}
-                  style={{
-                    display: 'inline-flex', alignItems: 'center', gap: '8px',
-                    padding: '12px 20px', borderRadius: '100px',
-                    border: '1px solid var(--border)', color: 'var(--gray)',
-                    fontSize: '0.9rem', fontFamily: 'Syne', fontWeight: 600,
-                    transition: 'all 0.3s',
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--yellow)'; e.currentTarget.style.color = 'var(--yellow)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--gray)'; }}
-                >
-                  <FiMail size={16} /> {personalInfo.email}
-                </a>
-                
-                <a
-                  href={`tel:${personalInfo.phone.replace(/\s/g, '')}`}
-                  style={{
-                    display: 'inline-flex', alignItems: 'center', gap: '8px',
-                    padding: '12px 20px', borderRadius: '100px',
-                    border: '1px solid var(--border)', color: 'var(--gray)',
-                    fontSize: '0.9rem', fontFamily: 'Syne', fontWeight: 600,
-                    transition: 'all 0.3s',
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--yellow)'; e.currentTarget.style.color = 'var(--yellow)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--gray)'; }}
-                >
-                  <FiPhone size={16} /> {personalInfo.phone}
-                </a>
-              </div>
 
-              
-            </div>
-          </motion.div>
-        </div>
-      </div>
+        {/* Main row */}
+        <motion.div
+          initial={{ y: 16, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '20px',
+            paddingBottom: '24px',
+            borderBottom: '1px solid var(--border)',
+            marginBottom: '20px',
+          }}
+        >
+          {/* Name */}
+          <span style={{
+            fontFamily: 'Syne', fontWeight: 800,
+            fontSize: '1.05rem', color: 'var(--white)',
+            whiteSpace: 'nowrap',
+          }}>
+            Pritam Lambade
+          </span>
 
-      {/* Bottom bar */}
-      <div style={{ padding: '28px 0' }}>
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
-            <span style={{ fontFamily: 'Syne', fontWeight: 800, fontSize: '1.0rem' }}>
-              Pritam Lambade
-            </span>
+          {/* Email + Phone */}
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <a
+              href={`mailto:${personalInfo.email}`}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '7px',
+                padding: '8px 16px', borderRadius: '100px',
+                border: '1px solid var(--border)',
+                color: 'var(--gray)', fontSize: '0.82rem',
+                fontFamily: 'Syne', fontWeight: 600,
+                textDecoration: 'none', transition: 'all 0.2s',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = 'var(--border-yellow)';
+                e.currentTarget.style.color = 'var(--yellow)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = 'var(--border)';
+                e.currentTarget.style.color = 'var(--gray)';
+              }}
+            >
+              <FiMail size={14} /> {personalInfo.email}
+            </a>
 
-            {/* Social links */}
-            <div style={{ display: 'flex', gap: '8px' }}>
-              {socials.map((s, i) => (
-                <a
-                  key={i}
-                  href={s.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  data-hover="true"
-                  title={s.label}
-                  style={{
-                    width: '38px', height: '38px', borderRadius: '10px',
-                    border: '1px solid var(--border)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    color: 'var(--gray)', transition: 'all 0.2s',
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--border-yellow)'; e.currentTarget.style.color = 'var(--yellow)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--gray)'; }}
-                >
-                  {s.icon}
-                </a>
-              ))}
-            </div>
-
-            <p style={{ color: 'var(--gray)', fontSize: '0.8rem' }}>
-              © 2023 All rights reserved
-Designed with ♥️ by 2FT Wizards [Er. Lambade Pritam] v7.0
-            </p>
+            <a
+              href={`tel:${personalInfo.phone.replace(/\s/g, '')}`}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '7px',
+                padding: '8px 16px', borderRadius: '100px',
+                border: '1px solid var(--border)',
+                color: 'var(--gray)', fontSize: '0.82rem',
+                fontFamily: 'Syne', fontWeight: 600,
+                textDecoration: 'none', transition: 'all 0.2s',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = 'var(--border-yellow)';
+                e.currentTarget.style.color = 'var(--yellow)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = 'var(--border)';
+                e.currentTarget.style.color = 'var(--gray)';
+              }}
+            >
+              <FiPhone size={14} /> {personalInfo.phone}
+            </a>
           </div>
-        </div>
-      </div>
 
-      <style>{`
-        @media (max-width: 768px) {
-          .footer-contact {
-            flex-direction: column;
-            gap: 16px !important;
-          }
-          .footer-contact-info {
-            flex-direction: column;
-            gap: 12px !important;
-          }
-          .footer-contact-info a {
-            width: 100%;
-            justify-content: center;
-          }
-        }
-      `}</style>
+          {/* Socials */}
+          <div style={{ display: 'flex', gap: '8px' }}>
+            {socials.map((s, i) => (
+              <a
+                key={i}
+                href={s.link}
+                target="_blank"
+                rel="noreferrer"
+                title={s.label}
+                style={{
+                  width: '36px', height: '36px', borderRadius: '10px',
+                  border: '1px solid var(--border)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  color: 'var(--gray)', transition: 'all 0.2s',
+                  textDecoration: 'none',
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.borderColor = 'var(--border-yellow)';
+                  e.currentTarget.style.color = 'var(--yellow)';
+                  e.currentTarget.style.background = 'rgba(255,214,0,0.05)';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.borderColor = 'var(--border)';
+                  e.currentTarget.style.color = 'var(--gray)';
+                  e.currentTarget.style.background = 'transparent';
+                }}
+              >
+                {s.icon}
+              </a>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Copyright */}
+        <p style={{
+          color: 'var(--gray)', fontSize: '0.78rem',
+          textAlign: 'center', margin: 0, lineHeight: 1.6,
+        }}>
+          © 2023 All rights reserved · Designed with ♥️ by 2FT Wizards [Er. Lambade Pritam] v7.0
+        </p>
+
+      </div>
     </footer>
   );
 }

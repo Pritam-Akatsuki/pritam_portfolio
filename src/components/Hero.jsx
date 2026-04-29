@@ -95,13 +95,13 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.7 }}
             style={{
-              fontSize: 'clamp(3.2rem, 9vw, 7.5rem)',
+              fontSize: 'clamp(3.0rem, 8vw, 6.5rem)',
               fontWeight: 800, lineHeight: 0.95,
               marginBottom: '20px', letterSpacing: '-0.03em',
             }}
           >
-            Pritam<br />
-            <span className="highlight">Lambade</span>
+            Pritam
+            <span className="highlight"> Lambade</span>
           </motion.h1>
 
           <motion.p
@@ -121,7 +121,7 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.55 }}
             style={{
-              maxWidth: '540px', color: 'var(--white-soft)',
+              maxWidth: '800px', color: 'var(--white-soft)',
               lineHeight: 1.85, fontSize: '1rem', marginBottom: '42px',
             }}
           >
@@ -208,7 +208,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Scroll indicator */}
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 2.5 }}
         style={{
@@ -219,7 +219,7 @@ export default function Hero() {
       >
         <span>Scroll</span>
         <div style={{ width: '1px', height: '40px', background: 'linear-gradient(to bottom, var(--gray), transparent)' }} />
-      </motion.div>
+      </motion.div> */}
 
       <style>{`
         @media (max-width: 1100px) {

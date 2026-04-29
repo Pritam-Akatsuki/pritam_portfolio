@@ -10,7 +10,7 @@ export const personalInfo = {
   instagram: "https://www.instagram.com/_noname.2001/",
   hackerrank: "https://www.hackerrank.com/profile/pritamlambade",
   portfolio: "https://pritam-akatsuki.github.io/MyPortfolio.github.io/portfolio.html",
-  resumeLink: "https://drive.google.com/file/d/1w4dZojTny_kqF9otvbqCFGGeprDveSIH/view?usp=sharing",
+  resumeLink: "https://drive.google.com/file/d/1HyAE0b_wqfu_jInJjI6E3vU0XySYOH4q/view?usp=sharing",
   about:
     "Software Developer with 3+ years of experience building scalable web and mobile applications using Flutter, Angular, and React. Specialized in SAP Spartacus and SAP Commerce Cloud (Hybris) customizations, frontend architecture, and API integrations. Strong focus on performance, clean UI, analytics, and maintainable code.",
 };
@@ -41,18 +41,6 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "SUCO – Food Delivery App",
-    description:
-      "Full-featured food ordering mobile app with product listing, category toggling, cart management, and order placement. Integrated Razorpay payment gateway handling success/failure callbacks with secure backend API.",
-    tags: ["Flutter", "REST APIs", "Razorpay"],
-    color: "#02569B",
-    emoji: "🍔",
-    duration: "Nov 2024 – Present",
-    link: "#",
-    github: "https://github.com/Pritam-Akatsuki",
-  },
-  {
-    id: 2,
     title: "SAP Spartacus eCommerce",
     description:
       "Customized Spartacus storefront for dynamic Unit of Measure (UOM) selection on PDP and cart pages. Used BaseSiteService with custom logic to conditionally render components based on active site.",
@@ -63,6 +51,19 @@ export const projects = [
     link: "#",
     github: "https://github.com/Pritam-Akatsuki",
   },
+  {
+    id: 2,
+    title: "SUCO – Food Delivery App",
+    description:
+      "Full-featured food ordering mobile app with product listing, category toggling, cart management, and order placement. Integrated Razorpay payment gateway handling success/failure callbacks with secure backend API.",
+    tags: ["Flutter", "REST APIs", "Razorpay"],
+    color: "#02569B",
+    emoji: "🍔",
+    duration: "Nov 2024 – Present",
+    link: "#",
+    github: "https://github.com/Pritam-Akatsuki",
+  },
+  
   {
     id: 3,
     title: "SAP Hybris Storefront",
@@ -84,6 +85,18 @@ export const projects = [
     color: "#61DAFB",
     emoji: "📊",
     duration: "2023",
+    link: "#",
+    github: "https://github.com/Pritam-Akatsuki",
+  },
+  {
+    id: 1,
+    title: "ML-based Sales Forecasting and Purchase Reminder",
+    description:
+      "Developed an ML model to forecast sales and send automated purchase reminders based on inventory levels and demand patterns.",
+    tags: ["ML", "Python", "JavaScript", "MySQL"],
+    color: "#DD00C3",
+    emoji: "🛒",
+    duration: "Jan 2022 – Jan 2023",
     link: "#",
     github: "https://github.com/Pritam-Akatsuki",
   },
@@ -140,4 +153,7 @@ export const certifications = [
   { name: "UI/UX Design with Figma", issuer: "Udemy", year: "2025" },
   { name: "JavaScript, SQL, CSS, React", issuer: "HackerRank", year: "2023" },
   { name: "AWS Academy Cloud Foundations", issuer: "AWS Academy", year: "2022" },
+  { name: "Data Structures in C++", issuer: "Scaler", year: "2023" },
+  { name: "Communication Skills", issuer: "TCS iON", year: "2023" },
+  { name: "Full Stack Java Developer", issuer: "Simplilearn", year: "2023" },
 ];
